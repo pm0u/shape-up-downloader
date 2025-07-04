@@ -11,6 +11,7 @@ use Symfony\Component\DomCrawler\Crawler;
 class ReplaceImagesWithBase64VersionsModifier implements PageContentModifier
 {
     private const FILE_TYPES = [
+        '/\\.jpeg$/' => 'image/jpeg',
         '/\\.jpg$/' => 'image/jpeg',
         '/\\.png$/' => 'image/png',
         '/\\.gif/' => 'image/gif',
